@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ReqRes Users — QA Test</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    .container {
+      width: 900px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .test-label {
+      display: inline-block;
+      padding: 8px 12px;
+      background: #eee;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 14px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f2f5;
+    }
+
+    /* INTENTIONAL TEST DEFECT */
+    .response-panel {
+      position: absolute;
+      top: 220px;
+      right: 30px;
+      width: 430px;
+      height: 230px;
+      background: white;
+      border: 2px solid #888;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+      z-index: 10;
+    }
+
+    .response-panel h2 {
+      margin-top: 0;
+    }
+
+    .defect-note {
+      margin-top: 25px;
+      padding: 12px;
+      background: #fff3cd;
+      border: 1px solid #ffe69c;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="test-label">
+      TEST PAGE
+    </div>
+
+    <h1>ReqRes Users — QA Test</h1>
+
+    <h2>Users</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>George</td>
+          <td>george@example.com</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Janet</td>
+          <td>janet@example.com</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Emma</td>
+          <td>emma@example.com</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Michael</td>
+          <td>michael@example.com</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>Rachel</td>
+          <td>rachel@example.com</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>Robert</td>
+          <td>robert@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="defect-note">
+      <strong>Intentional defect:</strong>
+      The response panel overlaps the users table.
+    </div>
+
+    <!-- INTENTIONAL UI DEFECT -->
+    <div class="response-panel">
+      <h2>Response</h2>
+
+      <p>
+        API response received successfully.
+      </p>
+
+      <p>
+        This panel intentionally overlaps the users table.
+      </p>
+
+      <p>
+        Some table rows are hidden beneath this panel.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>
